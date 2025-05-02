@@ -18,6 +18,7 @@ async function fetchWeatherData(searchCity) {
     city(data);
     displayWeather(data);
   } else {
+    content.innerHTML = `<h1 class="text-center mt-5">Please Allow location</h1>`;
     console.log("Location Error");
   }
 }
