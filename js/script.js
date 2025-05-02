@@ -18,7 +18,6 @@ async function fetchWeatherData(searchCity) {
     city(data);
     displayWeather(data);
   } else {
-    content.innerHTML = `<h1 class="text-center mt-5">Please Allow location</h1>`;
     console.log("Location Error");
   }
 }
@@ -151,6 +150,7 @@ function success(pos) {
 
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
+  content.innerHTML = `<h1 class="mt-5 pt-5 text-danger text-center text-capitalize">User denied Geolocation</h1>`;
 }
 
 navigator.geolocation.getCurrentPosition(success, error);
