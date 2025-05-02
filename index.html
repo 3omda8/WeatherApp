@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Weather App" />
+    <meta name="keywords" content="Weather, App, JavaScript" />
+    <meta name="author" content="Mohamed Emad Dawood" />
+    <link
+      rel="shortcut icon"
+      href="./images/weather.webp"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Weather</title>
+    <!-- BootStrap File -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row justify-content-between mt-4">
+        <h1 class="text-primary text-center col-md-4 m-2 ms-0">
+          <img src="./images/weather.webp" class="me-3" alt="logo" />Weather
+        </h1>
+        <div class="col-md-5 col-lg-4 text-center my-3 d-flex">
+          <input
+            onchange="change()"
+            type="text"
+            id="searchInput"
+            class="form-control rounded-0 rounded-start"
+            placeholder="Enter city name..."
+          />
+          <button id="searchBtn" class="btn btn-primary rounded-0 rounded-end">
+            Search
+          </button>
+        </div>
+      </div>
+      <h2
+        id="cityName"
+        class="text-center text-white text-capitalize mt-5 fs-3r"
+      ></h2>
+      <div id="content" class="row mt-3"></div>
+    </div>
+    <footer
+      class="footer mt-5 pt-5 d-flex justify-content-center align-items-center"
+    >
+      <div>
+        <p class="text-center mt-4">Weather App &copy; 2025</p>
+        <p class="text-center fw-bold">Developed by Mohamed Emad Dawood</p>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
