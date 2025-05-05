@@ -50,7 +50,7 @@ function displayWeather(data) {
     "November",
     "December",
   ];
-  content.innerHTML = `<div class="col-md-6 col-lg-4 text-center mt-5">
+  content.innerHTML = `<div class="col-md-6 col-lg-4 text-center mt-5 mt-lg-3">
           <div class="card bg-dark text-white rounded-5">
             <img
               src="./images/weather.webp"
@@ -77,7 +77,6 @@ function displayWeather(data) {
                 <p class="card-text fs-1">${data.current.temp_c}°C</p>
                 
               </div>
-
               <p class="card-text">${condition.text}</p>
             </div>
           </div>
@@ -107,7 +106,7 @@ function anotherdisplayWeather(data) {
     const dayName = days[nextDay.getDay()];
 
     content.innerHTML += `
-      <div class="col-md-6 col-lg-4 text-center mt-5">
+      <div class="col-md-6 col-lg-4 text-center mt-5 mt-lg-3">
         <div class="card bg-dark text-white rounded-5">
           <img src="./images/weather.webp" class="card-img opacity-75 rounded-5" alt="weather" />
           <div class="card-img-overlay">
