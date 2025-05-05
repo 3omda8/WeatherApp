@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-image: url(../images/bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 90vh;
+  min-height: 100dvh;
 }
 
 h1 img {
@@ -29,3 +34,8 @@ h1 img {
 .form-control:focus {
   box-shadow: -3px 6px 0 0rem rgba(13, 110, 253, 0.25);
 }
+
+/* @media screen and (max-width: 1000px) {
+  body {
+  }
+} */

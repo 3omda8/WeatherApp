@@ -13,7 +13,7 @@ async function fetchWeatherData(searchCity) {
       throw new Error("Network response was not ok " + response.statusText);
     }
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
     // console.log(data.location.name);
     city(data);
     displayWeather(data);
@@ -77,7 +77,12 @@ function displayWeather(data) {
                 <p class="card-text fs-1">${data.current.temp_c}°C</p>
                 
               </div>
-              <p class="card-text">${condition.text}</p>
+              <div class="d-flex justify-content-center">
+              <p class="card-text pe-3">${condition.text}</p>
+              <p class="card-text"><span class="pe-1"><i class="fa-solid fa-wind"></i></span>${
+                data.current.wind_kph
+              } km/h</p>
+              </div>
             </div>
           </div>
         </div>
